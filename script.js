@@ -72,7 +72,6 @@
     const shape = $('#transition-stroke', wrap);
     const sigEl = $('[data-transition-signature]', wrap);
     const sigText = $('[data-signature-text]', wrap);
-    const cursor = $('[data-signature-cursor]', wrap);
     const reveals = $$('[data-transition-reveal]');
     let shapeLen = 0;
     if (shape) { try { shapeLen = shape.getTotalLength(); } catch (x) { shapeLen = 4200; } }
@@ -91,53 +90,42 @@
       el.style.transform = 'translateY(1.5rem)';
     });
 
-    let chars = [];
-    if (sigText) {
-      const txt = sigText.textContent;
-      sigText.textContent = '';
-      chars = [...txt].map(ch => {
-        const s = document.createElement('span');
-        s.className = 'signature-char';
-        s.textContent = ch === ' ' ? '\u00A0' : ch.replace(/&/g, '&amp;');
-        sigText.appendChild(s);
-        return s;
-      });
-    }
-
-    const n = Math.max(1, chars.length);
-    const writeTotal = Math.min(1.25, 0.45 + n * 0.05);
-    const stepMs = 40 + (writeTotal / n) * 1000;
+    const n = Math.max(1, sigText ? [...(sigText.textContent || '')].length : 0);
+    const writeTotal = Math.min(1.5, 0.9 + n * 0.03);
+    const eraseTotal = 0.5;
 
     sigEl.classList.add('is--visible');
 
+    const sweep = (dur, reverse) => {
+      if (!sigText) return;
+      const grad = reverse
+        ? 'linear-gradient(270deg,transparent 0,#000 var(--mask-edge))'
+        : 'linear-gradient(90deg,transparent 0,#000 var(--mask-edge))';
+      const pos = reverse ? '100% 0' : '0% 0';
+      sigText.style.transition = 'none';
+      sigText.style.webkitMaskImage = grad;
+      sigText.style.maskImage = grad;
+      sigText.style.webkitMaskPosition = pos;
+      sigText.style.maskPosition = pos;
+      sigText.style.webkitMaskSize = '0% 100%';
+      sigText.style.maskSize = '0% 100%';
+      void sigText.offsetWidth;
+      sigText.style.transition = `-webkit-mask-size ${dur.toFixed(2)}s linear, mask-size ${dur.toFixed(2)}s linear`;
+      requestAnimationFrame(() => {
+        sigText.style.webkitMaskSize = '100% 100%';
+        sigText.style.maskSize = '100% 100%';
+      });
+    };
+
     const runTimeline = () => {
-      const width = sigText ? sigText.clientWidth : 0;
-      chars.forEach((c, i) => {
-        c.style.transition = '-webkit-mask-size .16s linear, mask-size .16s linear';
-        setTimeout(() => {
-          c.style.webkitMaskSize = '100% 100%';
-          c.style.maskSize = '100% 100%';
-        }, stepMs * (i + 0.2) + ((Math.random() * 8) | 0) * 10);
-      });
-      if (cursor && sigText && width) {
-        cursor.style.opacity = '1';
-        cursor.style.transition = `left ${(writeTotal + 0.05).toFixed(2)}s cubic-bezier(.42,0,.58,1)`;
-        requestAnimationFrame(() => { cursor.style.left = `${width}px`; });
-      }
+      sweep(writeTotal, false);
 
-      const eraseAt = (writeTotal + 0.35) * 1000;
-      chars.forEach((c, i) => {
-        c.style.transition = '-webkit-mask-size .3s linear, mask-size .3s linear';
-        setTimeout(() => {
-          c.style.webkitMaskSize = '0% 100%';
-          c.style.maskSize = '0% 100%';
-        }, eraseAt + i * 30);
-      });
-      setTimeout(() => { if (cursor) cursor.style.opacity = '0'; }, eraseAt + 200);
+      const eraseAt = (writeTotal + 0.3) * 1000;
+      setTimeout(() => sweep(eraseTotal, true), eraseAt);
       sigEl.style.transition = 'opacity .55s ease';
-      setTimeout(() => { sigEl.style.opacity = '0'; }, eraseAt + 430);
+      setTimeout(() => { sigEl.style.opacity = '0'; }, eraseAt + eraseTotal * 1000 - 80);
 
-      const eraseEndAt = eraseAt + (n * 30);
+      const eraseEndAt = eraseAt + eraseTotal * 1000;
       const shapeStart = eraseEndAt - 350;
       const shapeDur = 1250;
       const shapeEndAt = shapeStart + shapeDur;
