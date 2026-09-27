@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akshit Dhiman | Full-Stack Engineer · Realtime Systems</title>
+  <meta name="description" content="Akshit Dhiman — Analyst at Wise, working on the rules and decisioning behind customer due diligence. B.Tech Computer Science, LeetCode 1986 (top 2%)." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080912'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='30' fill='%23e2e1e1' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Archivo:wght@100..900&family=Space+Grotesk:wght@300..700&family=Marcellus&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme-nav="dark">
+  <!-- ================= TRANSITION OVERLAY (signature intro, Mac-hello style) =================
+       Paints the viewport dark-blue with the scribble, draws the name on like a signature,
+       erases it, then the paint thins out to reveal the page. Ditto of their runPageOnceAnimation. -->
+  <div data-transition-wrap class="transition" aria-hidden="true">
+    <div class="transition__shape">
+      <svg viewBox="0 0 3222 3114" fill="none" preserveAspectRatio="none" class="transition__svg">
+        <path id="transition-stroke" stroke="currentColor" stroke-width="80%" stroke-linecap="round" stroke-linejoin="round"
+          d="M299.654 453.865C505.574 319.225 711.494 184.585 836.054 109.945C960.614 35.3048 997.574 24.7448 944.014 110.385C890.454 196.025 745.254 378.185 571.454 634.385C397.654 890.585 199.654 1215.3 110.854 1382.58C22.0544 1549.86 48.4544 1549.86 77.8944 1540.62C107.334 1531.38 139.014 1512.9 367.854 1319.9C596.694 1126.9 1021.73 759.945 1255.21 555.065C1488.69 350.185 1517.73 318.505 1527.41 306.145C1537.09 293.785 1526.53 301.705 1346.85 618.625C1167.17 935.545 818.694 1561.22 635.214 1896.74C451.734 2232.26 443.814 2258.66 447.654 2268.3C451.494 2277.94 467.334 2270.02 511.134 2236.9C554.934 2203.78 626.214 2145.7 966.534 1817.46C1306.85 1489.22 1914.05 892.585 2263.81 557.505C2613.57 222.425 2687.49 166.985 2741.41 129.185C2795.33 91.3848 2827.01 72.9048 2843.33 67.3448C2859.65 61.7848 2859.65 69.7048 2849.09 96.2248C2838.53 122.745 2817.41 167.625 2584.77 544.505C2352.13 921.385 1370.37 2165.43 1139.25 2537.83C908.134 2910.23 902.854 2926.07 902.774 2939.51C902.694 2952.95 907.974 2963.51 1255.21 2613.87C1602.45 2264.23 2829.73 1017.54 2903.53 1071.46C2977.33 1125.38 2176.12 2817.04 2128 3037C2079.88 3256.96 2911.24 2018.56 3172 1793" />
+      </svg>
+    </div>
+    <div data-transition-signature class="transition__signature">
+      <span data-signature-text class="signature-text">Akshit Dhiman</span>
+      <span class="signature-cursor" data-signature-cursor aria-hidden="true"></span>
+    </div>
+  </div>
+  <div class="progressive-blur">
+    <div class="progressive-blur__layer is--1"></div>
+    <div class="progressive-blur__layer is--2"></div>
+    <div class="progressive-blur__layer is--3"></div>
+    <div class="progressive-blur__layer is--4"></div>
+    <div class="progressive-blur__layer is--5"></div>
+  </div>
+
+  <main class="main-wrapper">
+
+    <!-- ================= HEADER ================= -->
+    <header class="header" data-nav-bar-height>
+      <div class="navbar_wrapper">
+        <div class="brand_wrapper">
+          <button data-logo-scroll class="brand" data-back-to-top aria-label="Back to top">
+            <svg viewBox="0 0 1376 165" fill="none" aria-hidden="true">
+              <text x="0" y="132" font-family="Marcellus, Georgia, serif" font-weight="400" font-size="140"
+                    textLength="1376" lengthAdjust="spacing" fill="currentColor">AKSHIT DHIMAN</text>
+            </svg>
+          </button>
+        </div>
+        <div class="nav-button">
+          <a class="btn" data-roll data-variant="ink-black" href="mailto:akshithdh@gmail.com">
+            <span class="btn__txt">Let's talk</span>
+          </a>
+          <a class="btn" data-roll data-variant="dark-blue" href="https://github.com/akshithdh" target="_blank" rel="noopener">
+            <span class="btn__txt">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HERO (light photo, ink text, bottom row) ================= -->
+    <section data-theme-section="dark" class="hero" id="top" data-logo-scroll-trigger>
+      <!-- HERO PORTRAIT: 4:5 duotone cutout on white -->
+      <div class="hero-bg-wrap" data-parallax-bg>
+        <div class="ph-hero-bg">
+          <img class="ph-hero-img" src="assets/hero-cutout.png" alt="Akshit Dhiman" draggable="false" />
+        </div>
+      </div>
+
+      <div class="hero-content-wrap">
+        <div class="partner-wrap" data-transition-reveal>
+          <span class="hero-label">Wise · Analyst</span>
+          <div class="partner-dot"></div>
+          <span class="hero-label">Systems Engineer</span>
+        </div>
+        <div class="locate-wrap" data-transition-reveal>
+          <div class="hero-label txt-align-right">India, <span class="block-span">working globally.</span></div>
+          <div class="rotating-globe" aria-hidden="true">
+            <div class="globe">
+              <div class="globe-wrap">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle-hor"></div>
+                <div class="circle-hor-middle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT (light) ================= -->
+    <section id="about" data-theme-section="dark" class="about">
+      <div class="about-header-wrap">
+        <h1 data-split-rolling class="about-header__h"><span class="hl-line">Software that</span> moves <span class="hl">people.</span></h1>
+        <p data-split-lines class="about-header__p is--english">Real-time systems, backend architecture, and clean code that holds up under pressure.</p>
+      </div>
+
+      <div class="about-content-wrap">
+        <h2 data-bracket-heading class="heading-h2 is--titlecase"><span data-bracket-left class="heading-bracket is--left">[</span>About me<span data-bracket-right class="heading-bracket is--right">]</span></h2>
+        <p data-split-lines>I'm Akshit, a software engineer who likes building things that just work — clean, fast, and thought through from the ground up.</p>
+        <p data-split-lines>I care about the details most people skip. The kind of code that holds up under pressure, the kind of product that feels effortless because of everything happening quietly underneath. Every project I take on gets the same level of care, whether it's a small script or a full system.</p>
+        <a class="btn" data-roll data-variant="dark-blue" href="mailto:akshithdh@gmail.com">
+          <span class="btn__txt">Let's build something</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES — PAINTBRUSH TRANSITION ================= -->
+    <!-- Pinned 200%+: the giant scribble stroke draws itself and swells to 80%
+         stroke width, painting the whole viewport dark-blue (ditto of their
+         DrawSVG scrub). -->
+    <section data-theme-section="light" data-scroll-draw-transition class="scroll-draw-transition">
+      <div class="scroll-draw__pinned">
+        <div class="services-header__w">
+          <p data-split-rolling class="services-big-txt">Small details. <span class="services-big-txt__span">Big impact.</span></p>
+          <h2 data-bracket-heading class="heading-h2 txt-color-blue"><span data-bracket-left class="heading-bracket is--left">[</span>What I Do<span data-bracket-right class="heading-bracket is--right">]</span></h2>
+        </div>
+        <div class="scroll-draw-transition__overlay" aria-hidden="true">
+          <svg class="transition__svg" viewBox="0 0 3222 3114" fill="none" preserveAspectRatio="none">
+            <path id="draw-stroke" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              d="M299.654 453.865C505.574 319.225 711.494 184.585 836.054 109.945C960.614 35.3048 997.574 24.7448 944.014 110.385C890.454 196.025 745.254 378.185 571.454 634.385C397.654 890.585 199.654 1215.3 110.854 1382.58C22.0544 1549.86 48.4544 1549.86 77.8944 1540.62C107.334 1531.38 139.014 1512.9 367.854 1319.9C596.694 1126.9 1021.73 759.945 1255.21 555.065C1488.69 350.185 1517.73 318.505 1527.41 306.145C1537.09 293.785 1526.53 301.705 1346.85 618.625C1167.17 935.545 818.694 1561.22 635.214 1896.74C451.734 2232.26 443.814 2258.66 447.654 2268.3C451.494 2277.94 467.334 2270.02 511.134 2236.9C554.934 2203.78 626.214 2145.7 966.534 1817.46C1306.85 1489.22 1914.05 892.585 2263.81 557.505C2613.57 222.425 2687.49 166.985 2741.41 129.185C2795.33 91.3848 2827.01 72.9048 2843.33 67.3448C2859.65 61.7848 2859.65 69.7048 2849.09 96.2248C2838.53 122.745 2817.41 167.625 2584.77 544.505C2352.13 921.385 1370.37 2165.43 1139.25 2537.83C908.134 2910.23 902.854 2926.07 902.774 2939.51C902.694 2952.95 907.974 2963.51 1255.21 2613.87C1602.45 2264.23 2829.73 1017.54 2903.53 1071.46C2977.33 1125.38 2176.12 2817.04 2128 3037C2079.88 3256.96 2911.24 2018.56 3172 1793" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES (pinned stepper) ================= -->
+    <section id="services" data-theme-section="light" class="services" data-services>
+      <div class="services-sticky" data-services-step>
+        <div class="services-list" data-services-list>
+          <div class="service-item" data-services-item>
+            <div class="service-row" data-services-row>
+              <div class="service-number">[01]</div>
+              <h3 class="service-title">Distributed &amp; Realtime Systems</h3>
+            </div>
+            <div class="service-visual" data-services-visual>
+              <div class="service-description">
+                <p>WebRTC mesh calls, WebSocket signaling, cross-tab state sync. If it needs concurrency and eventual consistency, that's my lane.</p>
+              </div>
+              <div class="service-image-wrap" data-services-image-wrap><img class="service-image is--a" src="assets/service-01a.jpg" width="1400" height="877" alt="PairLane realtime call interface" draggable="false" loading="lazy" /><img class="service-image is--b" src="assets/service-01b.jpg" width="1400" height="871" alt="PairLane realtime call screen" draggable="false" loading="lazy" /></div>
+            </div>
+          </div>
+
+          <div class="service-item" data-services-item>
+            <div class="service-row" data-services-row>
+              <div class="service-number">[02]</div>
+              <h3 class="service-title">Full-Stack Product Engineering</h3>
+            </div>
+            <div class="service-visual" data-services-visual>
+              <div class="service-description">
+                <p>TypeScript end to end — frontends that feel instant, backends that hold up. I ship both, and I ship them coherent.</p>
+              </div>
+              <div class="service-image-wrap" data-services-image-wrap><img class="service-image is--a" src="assets/service-02-weaave.jpg" width="3378" height="2091" alt="Weaave visual AI workflow builder" draggable="false" loading="lazy" /><img class="service-image is--b" src="assets/service-02b-weaave2.jpg" width="3363" height="2101" alt="Weaave workflow canvas with AI nodes" draggable="false" loading="lazy" /></div>
+            </div>
+          </div>
+
+          <div class="service-item" data-services-item>
+            <div class="service-row" data-services-row>
+              <div class="service-number">[03]</div>
+              <h3 class="service-title">Automation &amp; AI Orchestration</h3>
+            </div>
+            <div class="service-visual" data-services-visual>
+              <div class="service-description">
+                <p>Workflows that run themselves — steps fire in the right order, the independent ones happen at the same time, and the AI calls sit in the middle of it all without you babysitting any of it.</p>
+              </div>
+              <div class="service-image-wrap" data-services-image-wrap><img class="service-image is--a" src="assets/service-03-dag.jpg" width="3367" height="2108" alt="Workflow DAG with parallel branches" draggable="false" loading="lazy" /><img class="service-image is--b" src="assets/service-03b-dag2.png" width="2956" height="2020" alt="Workflow node editor with AI processing steps" draggable="false" loading="lazy" /></div>
+            </div>
+          </div>
+
+          <div class="service-item" data-services-item>
+            <div class="service-row" data-services-row>
+              <div class="service-number">[04]</div>
+              <h3 class="service-title">Algorithms &amp; Competitive Programming</h3>
+            </div>
+            <div class="service-visual" data-services-visual>
+              <div class="service-description">
+                <p>LeetCode 1986, top 2%, contest rank 193 of 29,215. Not a flex — it's how I debug, optimize, and design.</p>
+              </div>
+              <div class="service-image-wrap" data-services-image-wrap><img class="service-image is--solo" src="assets/service-04-leetcode.jpg" width="736" height="981" alt="LeetCode contest profile" draggable="false" loading="lazy" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS (orbit) ================= -->
+    <section id="portfolio" data-theme-section="dark" class="portfolio">
+      <div class="portfolio-header-w">
+        <h2 data-bracket-heading class="heading-h2"><span data-bracket-left class="heading-bracket is--left">[</span>Projects<span data-bracket-right class="heading-bracket is--right">]</span></h2>
+        <p data-split-rolling class="portfolio-header__p">Turning ideas into living systems.</p>
+      </div>
+
+      <div class="portfolio-orbit">
+        <div class="portfolio-orbit__content">
+          <div class="portfolio-orbit__info">
+            <div class="portfolio-orbit__count">
+              <div class="portfolio-orbit__count-col"><p data-count-current class="portfolio-orbit__count-txt">01</p></div>
+              <div class="portfolio-orbit__count-divider"></div>
+              <div class="portfolio-orbit__count-col"><p data-count-total class="portfolio-orbit__count-txt">05</p></div>
+            </div>
+            <div class="portfolio-orbit__info-bottom">
+              <div class="portfolio-orbit__description">
+                <div data-proj-content class="portfolio-orbit__content-item">
+                  <h3 data-proj-content-reveal>Weaave</h3>
+                  <p data-proj-content-reveal>An AI workflow builder — the steps sit on a canvas, connected to each other. The order works itself out, independent steps run side by side, and every run is saved so you can trace exactly what each step did. Complex pipelines, minus the plumbing.</p>
+                </div>
+                <div data-proj-content class="portfolio-orbit__content-item">
+                  <h3 data-proj-content-reveal>PairLane</h3>
+                  <p data-proj-content-reveal>Video calls plus a live collaborative editor. WebRTC mesh for media, Socket.IO signaling, coturn TURN relay, Monaco delta-sync for shared files.</p>
+                </div>
+                <div data-proj-content class="portfolio-orbit__content-item">
+                  <h3 data-proj-content-reveal>Job Agent</h3>
+                  <p data-proj-content-reveal>An automated agent that watches boards, tailors applications with my profile, and tracks the funnel. Pipeline discipline applied to careers.</p>
+                </div>
+                <div data-proj-content class="portfolio-orbit__content-item">
+                  <h3 data-proj-content-reveal>LeetCode Archive</h3>
+                  <p data-proj-content-reveal>620+ problems, 1986 rating, weekly-contest top 193 of 29,215. A decade of debugging habits distilled into clean solutions.</p>
+                </div>
+                <div data-proj-content class="portfolio-orbit__content-item">
+                  <h3 data-proj-content-reveal>PackCheck</h3>
+                  <p data-proj-content-reveal>Delivery verification you can audit. The model reads the photos — SKU labels, unit markers — and does nothing else. TypeScript reconciles every label against the packing list and calls the verdict: verified, wrong item, or send a better photo. Perception is the model's job. Proof is code's.</p>
+                </div>
+              </div>
+              <div class="portfolio-orbit__overlay-nav">
+                <button aria-label="previous project" data-orbit-btn="prev" class="orbit-btn">
+                  <svg viewBox="0 0 17 12" fill="none"><path d="M6.29 12 7.54 10.9 3.49 6.78H16.5V5.22H3.49L7.54 1.09 6.29 0 .5 6Z" fill="currentColor"/></svg>
+                </button>
+                <button aria-label="next project" data-orbit-btn="next" class="orbit-btn is--next">
+                  <svg viewBox="0 0 17 12" fill="none"><path d="M6.29 12 7.54 10.9 3.49 6.78H16.5V5.22H3.49L7.54 1.09 6.29 0 .5 6Z" fill="currentColor"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-orbit__collection">
+            <div class="portfolio-orbit__list" data-orbit-list>
+              <a class="portfolio-orbit__item" data-orbit-tiles-item style="--c:#2a4093">
+                <div class="portfolio-orbit__card is--video" data-orbit-card>
+                  <div class="portfolio-orbit__image-mask" data-orbit-tiles-mask><video class="portfolio-orbit__video" data-orbit-video src="assets/weaave-card.mp4" muted loop playsinline preload="metadata" disablepictureinpicture aria-label="Weaave visual AI workflow builder"></video></div>
+                </div>
+              </a>
+              <a class="portfolio-orbit__item" data-orbit-tiles-item style="--c:#2a4093">
+                <div class="portfolio-orbit__card is--video" data-orbit-card>
+                  <div class="portfolio-orbit__image-mask" data-orbit-tiles-mask><video class="portfolio-orbit__video" data-orbit-video src="assets/pairlane-card.mp4" muted loop playsinline preload="metadata" disablepictureinpicture aria-label="PairLane realtime call interface"></video></div>
+                </div>
+              </a>
+              <a class="portfolio-orbit__item" data-orbit-tiles-item style="--c:#080912">
+                <div class="portfolio-orbit__card" data-orbit-card>
+                  <div class="portfolio-orbit__image-mask" data-orbit-tiles-mask><div class="ph ph-orb" data-ph-label="Job Agent · 16:9"></div></div>
+                </div>
+              </a>
+              <a class="portfolio-orbit__item" data-orbit-tiles-item style="--c:#2a4093">
+                <div class="portfolio-orbit__card is--video" data-orbit-card>
+                  <div class="portfolio-orbit__image-mask" data-orbit-tiles-mask><video class="portfolio-orbit__video" data-orbit-video src="assets/leetcode-card.mp4" muted loop playsinline preload="metadata" disablepictureinpicture aria-label="LeetCode contest profile and rating walkthrough"></video></div>
+                </div>
+              </a>
+              <a class="portfolio-orbit__item" data-orbit-tiles-item style="--c:#2a4093" href="https://github.com/akshithdh/PackCheck" target="_blank" rel="noopener noreferrer" aria-label="PackCheck on GitHub">
+                <div class="portfolio-orbit__card is--video" data-orbit-card>
+                  <div class="portfolio-orbit__image-mask" data-orbit-tiles-mask><video class="portfolio-orbit__video" data-orbit-video src="assets/packcheck-card.mp4" muted loop playsinline preload="metadata" disablepictureinpicture aria-label="PackCheck product walkthrough"></video></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-cta">
+        <a class="btn" data-roll data-variant="ink-black" href="mailto:akshithdh@gmail.com">
+          <span class="btn__txt">Let's build your project</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section data-theme-section="dark" class="certification">
+      <div class="certification-header-w">
+        <h2 data-split-random class="certified-big-txt">Numbers &amp; Disciplines</h2>
+      </div>
+      <div class="certification-content-w">
+        <p data-split-random>Measured, competitive, dependable — the same standards I hold for every system I ship.</p>
+      </div>
+      <div class="certifications-logos">
+        <div class="certifications-logo">
+          <span class="logo-lockup">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12c0-1.5 1.3-2 2.5-2M4.5 12c1.2 0 2.2-1 2.5-2m0 0c.3-1 1.3-2 2.5-2m0 0c1.6 0 2.5 1 2.5 2m-7 2C5 10 6 9 7 9c1.5 0 2.5 1 2.5 2"/></svg>
+            <span style="font-weight:800"><span class="stats-num" data-count-up="1986">0</span></span> LeetCode rating
+          </span>
+        </div>
+        <div class="certifications-logo">
+          <span class="logo-lockup">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+            <span style="font-weight:800">Top <span class="stats-num" data-count-up="2">0</span>%</span> global · <span style="font-weight:800"><span class="stats-num" data-count-up="620" data-suffix="+">0</span></span> solved
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" data-theme-section="light" class="contact">
+      <div class="contact-sticky">
+        <div aria-hidden="true" data-contact-words class="contact-words"></div>
+        <div data-contact-content class="contact-content">
+          <h2 class="contact-heading">Contact</h2>
+          <p class="contact-text">Have a distributed problem worth solving — or an opportunity worth exploring? I'd love to hear it. I respond fast.</p>
+          <div class="button-group">
+            <a class="btn" data-roll data-variant="light-silver" href="mailto:akshithdh@gmail.com">
+              <span class="btn__txt">akshithdh@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <div data-theme-section="light" data-footer class="footer-wrap">
+      <footer data-footer-inner class="footer">
+        <div class="footer-top">
+          <div class="footer-bracket"></div>
+          <div class="footer-bracket is--2"></div>
+          <div class="footer-content-w">
+            <div class="footer-col">
+              <p class="footer__links-label">[ Socials ]</p>
+              <ul class="footer__links-list">
+                <li class="footer__links-list-item"><a data-underline-link href="https://leetcode.com/akshitxd" target="_blank" rel="noopener" class="footer__links-txt">LeetCode</a></li>
+                <li class="footer__links-list-item"><a data-underline-link href="https://github.com/akshithdh" target="_blank" rel="noopener" class="footer__links-txt">GitHub</a></li>
+                <li class="footer__links-list-item"><a data-underline-link href="https://www.linkedin.com/in/akshitxdhiman/" target="_blank" rel="noopener" class="footer__links-txt">LinkedIn</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <p class="footer__links-label">[ Nav ]</p>
+              <ul class="footer__links-list">
+                <li class="footer__links-list-item"><a data-anchor="#about" class="footer__links-txt"><span data-underline-link>About</span></a></li>
+                <li class="footer__links-list-item"><a data-anchor="#services" class="footer__links-txt"><span data-underline-link>What I Do</span></a></li>
+                <li class="footer__links-list-item"><a data-anchor="#portfolio" class="footer__links-txt"><span data-underline-link>Projects</span></a></li>
+                <li class="footer__links-list-item"><a data-anchor="#contact" class="footer__links-txt"><span data-underline-link>Contact</span></a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <p class="footer__links-label">[ Reach me ]</p>
+              <ul class="footer__links-list">
+                <li class="footer__links-list-item"><a data-underline-link href="mailto:akshithdh@gmail.com" class="footer__links-txt">akshithdh@gmail.com</a></li>
+                <li class="footer__links-list-item"><span class="footer__links-txt">Bengaluru, India</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="txt-color-astronaut brand-lockup">
+            <svg viewBox="0 0 1376 165" fill="none" preserveAspectRatio="none">
+              <text x="0" y="120" fill="currentColor" font-family="Marcellus, Georgia, serif" font-weight="400" font-size="132" letter-spacing="2" textLength="1376" lengthAdjust="spacing">AKSHIT DHIMAN</text>
+            </svg>
+          </div>
+        </div>
+        <div class="footer-copy">
+          <div class="footer-copy__left">
+            <p class="footer-copy__label">Small details, big impact</p>
+            <p class="footer-copy__label">© <span data-current-year>2026</span>, <span class="font-name">Akshit Dhiman</span></p>
+          </div>
+          <a href="#top" class="w-inline-block"><p data-underline-link class="footer-copy__label">Back to top</p></a>
+        </div>
+      </footer>
+    </div>
+
+  </main>
+
+  <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
