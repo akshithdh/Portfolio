@@ -1,8 +1,8 @@
 :root{
   --light-silver:#e2e1e1;
   --ink-black:#080912;
-  --dark-blue:#2a4093;
-  --astronaut:#273879;
+  --dark-blue:#4F5542;
+  --astronaut:#555A46;
   --font-name:"Marcellus","Archivo",Georgia,serif;
   --font-display:"Space Grotesk","Archivo","Hanken Grotesk",sans-serif;
   --size-container:clamp(992px,100vw,1920px);
@@ -74,7 +74,7 @@ strong{font-weight:600}
   position:relative;display:inline-block;white-space:nowrap;
   font-size:clamp(2.8rem,10vw,7rem);line-height:1.25;
   padding:0 .3em;
-  --mask-edge:8%;
+  --mask-edge:4%;
   -webkit-mask:linear-gradient(90deg,transparent 0,#000 var(--mask-edge)) no-repeat 0 0/0% 100%;
   mask:linear-gradient(90deg,transparent 0,#000 var(--mask-edge)) no-repeat 0 0/0% 100%;
 }
@@ -102,13 +102,13 @@ body[data-theme-nav="dark"] .header{color:var(--ink-black)}
   border-radius:100px;padding:.95em 1.9em;font-weight:600;font-size:.95rem;
   line-height:1.1;text-align:center;white-space:nowrap;
 }
-.btn__txt{position:relative;z-index:1;display:block}
+.btn__txt{position:relative;z-index:2;display:block}
 [data-variant="ink-black"]{background:var(--ink-black);color:var(--light-silver)}
 [data-variant="dark-blue"]{background:var(--dark-blue);color:var(--light-silver)}
 [data-variant="light-silver"]{background:var(--light-silver);color:var(--ink-black)}
 .btn::after{
   content:"";position:absolute;inset:0;border-radius:inherit;z-index:0;
-  transform:translateY(102%);transition:transform .45s var(--ease-out-expo);
+  transform:translateY(102%);transition:transform .3s var(--ease-out-expo);
 }
 [data-variant="ink-black"]::after{background:var(--dark-blue)}
 [data-variant="dark-blue"]::after{background:var(--ink-black)}
@@ -276,7 +276,7 @@ body[data-theme-nav="dark"] .header{color:var(--ink-black)}
 .portfolio-orbit__overlay-nav{grid-column-gap:2em;display:flex}
 .orbit-btn{
   width:3.5em;height:3.5em;color:var(--dark-blue);
-  background-color:transparent;border:1px solid #2a409333;border-left-color:#2a409399;border-radius:.4em;
+  background-color:transparent;border:1px solid #4F554233;border-left-color:#4F554299;border-radius:.4em;
   justify-content:center;align-items:center;display:grid;place-items:center;transition:background .3s,color .3s;
 }
 .orbit-btn svg{width:1.1em;height:auto}
@@ -319,7 +319,7 @@ body[data-theme-nav="dark"] .header{color:var(--ink-black)}
 .contact-text{text-align:center;max-width:30em;font-size:1.3em;line-height:1.4}
 .button-group{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
 
-/* ---------------------------------- footer (dark-blue + silver brackets + astronaut bar) ---------------------------------- */
+/* ---------------------------------- footer (olive + silver brackets + black copy bar) ---------------------------------- */
 .footer-wrap{width:100%;height:85svh;position:relative;overflow:hidden}
 .footer{background-color:var(--dark-blue);width:100%;height:100%;max-height:85svh;color:var(--light-silver);
   flex-flow:column;justify-content:space-between;padding:5em 2em;position:relative;
@@ -340,9 +340,9 @@ body[data-theme-nav="dark"] .header{color:var(--ink-black)}
 .footer-bracket{border-top:1em solid var(--light-silver);border-bottom:1em solid var(--light-silver);
   border-left:1em solid var(--light-silver);pointer-events:none;width:3.5em;height:100%;position:absolute;inset:0% auto 0% 0%}
 .footer-bracket.is--2{border-right:1em solid var(--light-silver);border-left-width:0;inset:0% 0% 0% auto}
-.brand-lockup{color:var(--astronaut);width:100%}
+.brand-lockup{color:var(--light-silver);width:100%;opacity:.95}
 .brand-lockup svg{width:100%;height:auto;display:block;fill:currentColor}
-.footer-copy{background-color:var(--astronaut);color:var(--light-silver);justify-content:space-between;align-items:center;
+.footer-copy{background-color:var(--ink-black);color:var(--light-silver);justify-content:space-between;align-items:center;
   width:100%;min-height:2.5em;padding:.5em 2em;display:flex;position:absolute;inset:auto 0% 0%}
 .footer-copy__left{grid-column-gap:2em;grid-row-gap:2em;display:flex}
 .footer-copy__label{text-transform:uppercase;font-size:1em;font-weight:800;line-height:1;white-space:nowrap}

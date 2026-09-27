@@ -91,22 +91,18 @@
     });
 
     const n = Math.max(1, sigText ? [...(sigText.textContent || '')].length : 0);
-    const writeTotal = Math.min(1.5, 0.9 + n * 0.03);
-    const eraseTotal = 0.5;
+    const writeTotal = Math.min(1.7, 0.85 + n * 0.055);
+    const holdTotal = 0;
 
     sigEl.classList.add('is--visible');
 
-    const sweep = (dur, reverse) => {
+    const sweep = (dur) => {
       if (!sigText) return;
-      const grad = reverse
-        ? 'linear-gradient(270deg,transparent 0,#000 var(--mask-edge))'
-        : 'linear-gradient(90deg,transparent 0,#000 var(--mask-edge))';
-      const pos = reverse ? '100% 0' : '0% 0';
       sigText.style.transition = 'none';
-      sigText.style.webkitMaskImage = grad;
-      sigText.style.maskImage = grad;
-      sigText.style.webkitMaskPosition = pos;
-      sigText.style.maskPosition = pos;
+      sigText.style.webkitMaskImage = 'linear-gradient(90deg,transparent 0,#000 var(--mask-edge))';
+      sigText.style.maskImage = 'linear-gradient(90deg,transparent 0,#000 var(--mask-edge))';
+      sigText.style.webkitMaskPosition = '0% 0';
+      sigText.style.maskPosition = '0% 0';
       sigText.style.webkitMaskSize = '0% 100%';
       sigText.style.maskSize = '0% 100%';
       void sigText.offsetWidth;
@@ -118,14 +114,13 @@
     };
 
     const runTimeline = () => {
-      sweep(writeTotal, false);
+      sweep(writeTotal);
 
-      const eraseAt = (writeTotal + 0.3) * 1000;
-      setTimeout(() => sweep(eraseTotal, true), eraseAt);
-      sigEl.style.transition = 'opacity .55s ease';
-      setTimeout(() => { sigEl.style.opacity = '0'; }, eraseAt + eraseTotal * 1000 - 80);
+      const fadeAt = (writeTotal + holdTotal) * 1000;
+      sigEl.style.transition = 'opacity .5s ease';
+      setTimeout(() => { sigEl.style.opacity = '0'; }, fadeAt);
 
-      const eraseEndAt = eraseAt + eraseTotal * 1000;
+      const eraseEndAt = fadeAt + 500;
       const shapeStart = eraseEndAt - 350;
       const shapeDur = 1250;
       const shapeEndAt = shapeStart + shapeDur;
